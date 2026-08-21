@@ -100,6 +100,18 @@ public class SpeechToTextAndTextToSpeechChatbot {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Start chatting with the bot (type 'exit' to end):");
 
+        
+JButton clearButton = new JButton("Clear Chat");
+clearButton.setBounds(300, 10, 100, 25);
+panel.add(clearButton);
+
+clearButton.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        chatTextArea.setText(""); 
+    }
+});
+
         while (true) {
             System.out.print("You: ");
             String userInput = scanner.nextLine().toLowerCase();
